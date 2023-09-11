@@ -3,31 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Memory and Joke Jerker</title>
-    <style>
-        .joke-card {
-            width: 300px;
-            padding: 20px;
-            margin: 20px auto;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
-            border-radius: 5px;
-        }
-        .joke-card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
-        .joke-card p {
-            font-size: 16px;
-        }
-        .container {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Improve Your Memory and Laugh at Jokes!</h1>
-        <div class="joke-card">
-            <p>{{ joke }}</p>
+        <h1>Improve Your Memory While Laughing at Jokes!</h1>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>{{ joke }}</p>
+                </div>
+                <div class="flip-card-back">
+                    <p>Random numbers: {{ random_numbers|join(', ') }}</p>
+                </div>
+            </div>
         </div>
         <form method="POST">
             <button type="submit">Get New Joke</button>
@@ -35,4 +24,3 @@
     </div>
 </body>
 </html>
-
