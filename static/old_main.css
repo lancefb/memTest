@@ -1,0 +1,71 @@
+/* The header section styling which contains the main heading and instructions */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+/* Container to centralize the contents */
+.container {
+    text-align: center;
+}
+
+/* Styling for the flip card container */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Provides a 3D effect */
+    margin: 0 auto; /* Centers the card horizontally */
+    text-align: center; /* Centers the text inside the card */
+    margin-bottom: 20px;  /* Adds space below the card */
+}
+
+/* Inner container of the flip card to handle the flipping effect */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s; /* Transition effect for flipping */
+    transform-style: preserve-3d; /* Preserves the 3D transformations */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Adds shadow for a lifting effect */
+}
+
+/* Class to handle the flipping of the card */
+.flipped {
+    transform: rotateY(180deg); /* Rotates the card 180 degrees on the Y axis */
+}
+
+/* Styling for the front and back face of the flip card */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back face during the flip */
+}
+
+/* Specific styling for the back face of the flip card */
+.flip-card-back {
+    background-color: #bbb; /* Background color */
+    color: white; /* Text color */
+    transform: rotateY(180deg); /* Initial rotation to position it at the back */
+}
+
+/* Styling for the hidden input section */
+#input-section {
+    margin-top: 20px; /* Adds space above the input section */
+}
+
+/* Class to hide elements */
+.hidden {
+    display: none; /* Hides the element */
+}
