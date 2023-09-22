@@ -20,7 +20,8 @@
             Step 2: Remember them.<br>
             Step 3: Click the JOKES button to get a joke.<br>
             Step 4: Click again to enjoy another joke.<br>
-            Step 5: Look at 2 jokes before hovering again to see your numbers.<br>
+            Step 5: Look at 2 or more jokes before hovering again to see your numbers.<br>
+            How did you do? <br>
             Step 6: Click the NUMBERS button to get more numbers.<br>
         </p>
         <p>Ready? Let's get started!</p>
@@ -32,7 +33,7 @@
                     <p class="{{ 'welcome-text' if is_welcome_page else 'joke-text' }}">{{ joke|safe }}</p>
                 </div>
                 <div class="flip-card-back">
-                    <p>Random numbers: {{ random_numbers|join(', ') }}</p>
+                    <p>{{ random_numbers|join(', ') }}</p>
                 </div>
             </div>
         </div>
